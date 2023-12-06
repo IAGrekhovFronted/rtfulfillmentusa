@@ -17,7 +17,7 @@ header {
 }
 
 .cap {
-  padding: 2vh;
+  padding: 5vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,11 +33,12 @@ header {
   background: #e8f0ff;
   border-radius: 20px;
   padding: 10px;
-  font-size: 18px;
+  margin-right: 50px;
+  font-size: 0.9375vw;
   font-weight: 600;
 }
 .cap .cap__logo {
-  margin-left: 2vw;
+  margin-left: 5vw;
   font-weight: 700;
   font-size: 20px;
   position: relative;
@@ -200,6 +201,10 @@ header {
   left: 7px;
 }
 
+.cap__burger {
+  display: none;
+}
+
 @-webkit-keyframes OragneBox {
   100% {
     -webkit-transform: translateX(-100px) translateY(-100px);
@@ -223,5 +228,91 @@ header {
   100% {
     -webkit-transform: translateX(100px) translateY(-100px);
             transform: translateX(100px) translateY(-100px);
+  }
+}
+@media (height < 800px) {
+  .price {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .BlueCors {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+@media (width < 1500px) {
+  .price, .road {
+    display: none;
+  }
+  .BlueCors {
+    display: none;
+  }
+  .laptop {
+    display: none;
+  }
+  .handBack {
+    display: none;
+  }
+  .handAnter, .boxOnRoad, .navOnRoad {
+    display: none;
+  }
+}
+@media (width < 1300px) {
+  .cap nav {
+    display: none;
+  }
+  .CloudBig {
+    display: none;
+  }
+  .Cloud {
+    display: none;
+  }
+  .cap__burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    line-height: 40px;
+    font-size: 0.9375vw;
+    font-weight: 600;
+    font-size: 24px;
+    margin-left: 150px;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    text-align: right;
+  }
+  .cap__burger a {
+    -webkit-transition: scale 0.4s, opacity 0.4s, -webkit-transform 1.5s;
+    transition: scale 0.4s, opacity 0.4s, -webkit-transform 1.5s;
+    transition: transform 1.5s, scale 0.4s, opacity 0.4s;
+    transition: transform 1.5s, scale 0.4s, opacity 0.4s, -webkit-transform 1.5s;
+    -webkit-transform: perspective(600px) rotateX(-90deg);
+            transform: perspective(600px) rotateX(-90deg);
+    scale: 0;
+    opacity: 0;
+    height: 1px;
+  }
+  .cap__burger:hover a {
+    -webkit-transform: translateX(-150px) perspective(600px) rotateX(0deg);
+            transform: translateX(-150px) perspective(600px) rotateX(0deg);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    scale: 1;
+    opacity: 1;
+    height: auto;
+  }
+  .cap {
+    padding: 5vh 5vw 0;
+  }
+  .header__contain__title {
+    font-size: 32px;
+  }
+}
+@media (width < 500px) {
+  header {
+    width: 500px;
   }
 }
