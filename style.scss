@@ -1,0 +1,197 @@
+@mixin nav {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@mixin h1 {
+    font-size: (64*(100vw/1920));
+    font-weight: 700;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    color: black;
+    position: relative;
+    background-image: url("./img/back.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cap {
+    padding: 2vh;
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+        display: flex;
+        gap: 20px;
+        background: #e8f0ff;
+        border-radius: 20px;
+        padding: 10px;
+        @include nav
+    }
+
+    .cap__logo {
+        margin-left: 2vw;
+        font-weight: 700;
+        font-size: 20px;
+        position: relative;
+
+        &::before {
+            content: "";
+            height: 52px;
+            width: 28px;
+            background-image: url("./img/logocolor.svg");
+            position: absolute;
+            top: -0.8rem;
+            left: -2.5rem;
+        }
+    }
+}
+
+.header__contain {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: auto;
+    margin-top: 10vh;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header__contain__title {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    @include h1;
+
+    div {
+        display: inline-block;
+        background-image: linear-gradient(270deg,#f8ba55 0,#fb7354 100%);
+        color: white;
+        border-radius: 15px;
+    }
+}
+
+.header__contain__offer {
+    font-size: 24px;
+    color: #31225c;
+    font-weight: 300;
+}
+
+.header__contain__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 60px;
+    background-color: #7a43ee;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+.road {
+    position: absolute;
+    bottom: -10vh;
+    right: 0;
+}
+.boxOnRoad {
+    position: absolute;
+    bottom: 8vh;
+    right: 50vw;
+}
+.navOnRoad {
+    position: absolute;
+    bottom: 1vh;
+    right: 30vw;
+}
+.laptop {
+    position: absolute;
+    bottom: 5vh;
+    left: 10vw;
+}
+.CloudBig {
+    position: absolute;
+    bottom: 45vh;
+    left: 5vw;
+}
+.Cloud {
+    position: absolute;
+    bottom: 30vh;
+    right: 30vw;
+}
+.handAnter {
+    position: absolute;
+    bottom: -15vh;
+    right: 0;
+}
+.handBack {
+    position: absolute;
+    bottom: 15vh;
+    right: 0;
+}
+.price {
+    position: absolute;
+    bottom: 5vh;
+    right: 10vw;
+
+    animation: OragneBox 5s 5s infinite alternate linear;
+}
+.BlueCors {
+    position: absolute;
+    bottom: 25vh;
+    left: 21vw;
+
+    animation: BlueBox 5s infinite alternate linear;
+}
+.header__contain__button--round {
+    display: inline-block;
+    position: relative;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 2px solid #e8f0ff;
+    margin-left: 5px;
+}
+.header__contain__button--triangle {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid #e8f0ff;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+}
+
+
+@keyframes OragneBox {
+    0% {
+        
+    }
+    100% {
+        transform: translateX(-100px) translateY(-100px);
+    }
+}
+@keyframes BlueBox {
+    0% {
+        
+    }
+    100% {
+        transform: translateX(100px) translateY(-100px);
+    }
+}
